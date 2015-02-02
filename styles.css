@@ -1,0 +1,76 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: tahoma, sans-serif;
+  -webkit-user-select: none;
+  color: #222;
+  cursor: default;
+}
+.margin,
+.border,
+.padding,
+.content {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+.margin,
+.top,
+.bottom,
+.left,
+.right,
+.border,
+.padding,
+.content {
+  display: inline-block;
+}
+.margin,
+.left,
+.right,
+.border,
+.padding,
+.content {
+  vertical-align: middle;
+}
+.metrics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.margin {
+  border: 0.1rem dashed;
+  background: rgba(246,178,107,0.659);
+}
+.label {
+  position: absolute;
+  margin-left: 0.3rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.border {
+  border: 0.1rem #000 solid;
+  background: rgba(255,229,153,0.659);
+}
+.padding {
+  border: 0.1rem #808080 dashed;
+  background: rgba(147,196,125,0.549);
+}
+.content {
+  border: 0.1rem #808080 solid;
+  min-width: 8rem;
+  overflow: visible;
+  background: rgba(111,168,220,0.659);
+}
