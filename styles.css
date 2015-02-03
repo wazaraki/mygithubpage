@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
-  font-family: tahoma, sans-serif;
+  font-size: 100%;
+  font-family: sans-serif;
+  -moz-user-select: none;
   -webkit-user-select: none;
   color: #222;
   cursor: default;
+  overflow: hidden;
 }
 .margin,
 .border,
@@ -40,15 +42,12 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
   font-size: 1rem;
+  line-height: 1rem;
   text-align: center;
   white-space: nowrap;
+  height: 100vh;
+  transition: all 0.3s ease-out;
 }
 .margin {
   border: 0.1rem dashed;
@@ -73,4 +72,39 @@ html {
   min-width: 8rem;
   overflow: visible;
   background: rgba(111,168,220,0.659);
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 134.5%;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 125.5%;
+  }
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 116.5%;
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 107.5%;
+  }
+}
+@media (min-width: 1120px) {
+  html {
+    font-size: 98.5%;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 89.5%;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 62.5%;
+  }
 }
