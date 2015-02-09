@@ -78,6 +78,11 @@ html {
   overflow: visible;
   background: rgba(111,168,220,0.659);
 }
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
 @media (min-width: 480px) {
   html {
     font-size: 134.5%;
