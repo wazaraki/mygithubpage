@@ -12,6 +12,7 @@ html {
   cursor: default;
   overflow: hidden;
 }
+.position,
 .margin,
 .border,
 .padding,
@@ -19,6 +20,7 @@ html {
   padding: 0.3rem;
   margin: 0.3rem;
 }
+.position,
 .margin,
 .top,
 .bottom,
@@ -48,6 +50,9 @@ html {
   white-space: nowrap;
   height: 100vh;
   transition: all 0.3s ease-out;
+}
+.position {
+  border: 0.1rem #999 dotted;
 }
 .margin {
   border: 0.1rem dashed;
