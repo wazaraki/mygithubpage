@@ -80,7 +80,7 @@ html {
 }
 aside {
   position: fixed;
-  top: 0;
+  top: 5%;
   right: 0;
 }
 @media (min-width: 480px) {
