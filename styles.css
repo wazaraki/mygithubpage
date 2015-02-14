@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 100%;
+  font-size: 78.5%;
   font-family: sans-serif;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -39,6 +39,20 @@ html {
 .content {
   vertical-align: middle;
 }
+.margin,
+.border,
+.padding,
+.content {
+  transition: transform 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), box-shadow 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform: translateZ(0.1px);
+}
+.margin:hover,
+.border:hover,
+.padding:hover,
+.content:hover {
+  transform: translateZ(2.8rem);
+  box-shadow: -1.5rem 3rem 1rem rgba(0,0,0,0.1);
+}
 .metrics {
   display: flex;
   flex-direction: column;
@@ -50,13 +64,19 @@ html {
   white-space: nowrap;
   height: 100vh;
   transition: all 0.3s ease-out;
+  perspective: 80rem;
 }
 .position {
   border: 0.1rem #999 dotted;
+  transform-style: preserve-3d;
+  opacity: 0;
+  -webkit-animation: rot 5s cubic-bezier(0.35, 0, 0, 1.01) 1s forwards;
+  animation: rot 5s cubic-bezier(0.35, 0, 0, 1.01) 1s forwards;
 }
 .margin {
   border: 0.1rem dashed;
   background: rgba(246,178,107,0.659);
+  transform-style: preserve-3d;
 }
 .label {
   position: absolute;
@@ -67,10 +87,12 @@ html {
 .border {
   border: 0.1rem #000 solid;
   background: rgba(255,229,153,0.659);
+  transform-style: preserve-3d;
 }
 .padding {
   border: 0.1rem #808080 dashed;
   background: rgba(147,196,125,0.549);
+  transform-style: preserve-3d;
 }
 .content {
   border: 0.1rem #808080 solid;
@@ -82,6 +104,11 @@ aside {
   position: fixed;
   top: 5%;
   right: 0;
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 143.5%;
+  }
 }
 @media (min-width: 480px) {
   html {
@@ -98,23 +125,23 @@ aside {
     font-size: 116.5%;
   }
 }
-@media (min-width: 960px) {
-  html {
-    font-size: 107.5%;
+@-webkit-keyframes rot {
+  30% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(-30deg);
+    opacity: 1;
   }
 }
-@media (min-width: 1120px) {
-  html {
-    font-size: 98.5%;
+@keyframes rot {
+  30% {
+    transform: rotate(0);
+    opacity: 1;
   }
-}
-@media (min-width: 1280px) {
-  html {
-    font-size: 89.5%;
-  }
-}
-@media (min-width: 1440px) {
-  html {
-    font-size: 62.5%;
+  100% {
+    transform: rotateX(50deg) rotateZ(-30deg);
+    opacity: 1;
   }
 }
