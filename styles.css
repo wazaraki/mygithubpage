@@ -11,6 +11,7 @@ html {
   color: #222;
   cursor: default;
   overflow: hidden;
+  background: #fff;
 }
 .position,
 .margin,
@@ -63,7 +64,7 @@ html {
   text-align: center;
   white-space: nowrap;
   height: 100vh;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
   perspective: 80rem;
 }
 .position {
@@ -107,22 +108,42 @@ aside {
 }
 @media (min-width: 320px) {
   html {
-    font-size: 143.5%;
+    font-size: 87.5%;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 96.5%;
   }
 }
 @media (min-width: 480px) {
   html {
-    font-size: 134.5%;
+    font-size: 105.5%;
+  }
+}
+@media (min-width: 560px) {
+  html {
+    font-size: 114.5%;
   }
 }
 @media (min-width: 640px) {
   html {
-    font-size: 125.5%;
+    font-size: 123.5%;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 132.5%;
   }
 }
 @media (min-width: 800px) {
   html {
-    font-size: 116.5%;
+    font-size: 141.5%;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 159.5%;
   }
 }
 @-webkit-keyframes rot {
