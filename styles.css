@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:100");
 *,
 *:before,
 *:after {
@@ -101,10 +102,141 @@ html {
   overflow: visible;
   background: rgba(111,168,220,0.659);
 }
-aside {
+aside a {
+  display: block;
+}
+.p1 {
   position: fixed;
   top: 5%;
+  right: 2%;
+}
+.shape-gh {
+  width: 100%;
+  height: 100%;
+  fill: #333;
+  vertical-align: bottom;
+}
+.shape-tw {
+  width: 100%;
+  height: 100%;
+  fill-rule: evenodd;
+  fill: #55acee;
+  vertical-align: bottom;
+}
+.shape-in {
+  width: 100%;
+  height: 100%;
+  fill: #0077b5;
+  vertical-align: bottom;
+}
+.wm {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding-bottom: 0.6rem;
+  top: 3%;
+  left: 2%;
+  background: url("https://trello-attachments.s3.amazonaws.com/52a9921cda30e1902f0e9ba3/533b670c671bfe634f4141b9/96x96/c70880dfc00b4bc2d85de01ca2f95dc7/04_gameboy_v2.png");
+  border-radius: 100%;
+  background-size: cover;
+  cursor: pointer;
+  outline: 0;
+}
+.wm:hover,
+.wm:focus {
+  top: calc(3% + 1px);
+}
+.bubble {
+  display: block;
+  opacity: 0;
+  position: relative;
+  left: calc(0.6rem + 100%);
+  min-height: 2.6rem;
+  padding: 0.5rem;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 100;
+  background: #fafafa;
+  border-radius: 0.2rem;
+  border-bottom-left-radius: 0;
+  flex: 0 0 6rem;
+  transition: all 0.07s ease-out;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.07)) drop-shadow(0 1px 2px rgba(0,0,0,0.14));
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.08)) drop-shadow(0 1px 2px rgba(0,0,0,0.16));
+}
+.wm:hover .bubble,
+.wm:focus .bubble {
+  opacity: 1;
+}
+.bubble:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: calc(100%);
+  bottom: 0;
+  height: 0;
+  border: 0.6rem solid transparent;
+  border-right-width: 0;
+  border-bottom-color: #fafafa;
+}
+.social-cnt {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
   right: 0;
+}
+@media (min-width: 960px) {
+  .social-cnt {
+    flex-direction: column;
+    left: initial;
+    bottom: initial;
+    top: 0;
+  }
+}
+.social-item {
+  flex: 0 0 2.4rem;
+  height: 2.4rem;
+  margin: 1rem;
+}
+@media (min-width: 960px) {
+  .social-item {
+    width: 2.4rem;
+  }
+}
+.plus {
+  width: 100%;
+  height: 100%;
+}
+.plus-s {
+  background: #32cd32;
+}
+@media (min-width: 640px) {
+  .plus-s {
+    display: none;
+  }
+}
+.plus-m {
+  background: #ffa500;
+  display: none;
+}
+@media (min-width: 640px) and (max-width: 800px) {
+  .plus-m {
+    display: block;
+  }
+}
+.plus-l {
+  background: #ff6347;
+  display: none;
+}
+@media (min-width: 800px) {
+  .plus-l {
+    display: block;
+  }
 }
 @media (min-width: 320px) {
   html {
