@@ -141,7 +141,7 @@ aside a {
   padding-bottom: 0.6rem;
   top: 3%;
   left: 2%;
-  background: url("https://trello-attachments.s3.amazonaws.com/52a9921cda30e1902f0e9ba3/533b670c671bfe634f4141b9/96x96/c70880dfc00b4bc2d85de01ca2f95dc7/04_gameboy_v2.png");
+  background: url(/img/wm.png);
   border-radius: 100%;
   background-size: cover;
   cursor: pointer;
