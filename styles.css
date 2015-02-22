@@ -211,9 +211,9 @@ aside a {
 .plus {
   width: 100%;
   height: 100%;
-}
-.plus-s {
-  background: #32cd32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 640px) {
   .plus-s {
@@ -221,21 +221,19 @@ aside a {
   }
 }
 .plus-m {
-  background: #ffa500;
   display: none;
 }
 @media (min-width: 640px) and (max-width: 800px) {
   .plus-m {
-    display: block;
+    display: flex;
   }
 }
 .plus-l {
-  background: #ff6347;
   display: none;
 }
 @media (min-width: 800px) {
   .plus-l {
-    display: block;
+    display: flex;
   }
 }
 @media (min-width: 320px) {
