@@ -45,15 +45,8 @@ html {
 .border,
 .padding,
 .content {
-  transition: transform 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), box-shadow 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transform: translateZ(0.1px);
-}
-.margin:hover,
-.border:hover,
-.padding:hover,
-.content:hover {
+  transition: background 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transform: translateZ(2.8rem);
-  box-shadow: -1.5rem 3rem 1rem rgba(0,0,0,0.1);
 }
 .metrics {
   display: flex;
@@ -65,7 +58,6 @@ html {
   text-align: center;
   white-space: nowrap;
   height: 100vh;
-  transition: all 0.2s ease-out;
   perspective: 80rem;
 }
 .position {
@@ -83,8 +75,7 @@ html {
 .label {
   position: absolute;
   margin-left: 0.3rem;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+  padding: 0 0.2rem;
 }
 .border {
   border: 0.1rem #000 solid;
@@ -102,35 +93,28 @@ html {
   overflow: visible;
   background: rgba(111,168,220,0.659);
 }
+.white {
+  background: rgba(255,255,255,0.95);
+}
 aside a {
   display: block;
 }
-.p1 {
-  position: fixed;
-  top: 5%;
-  right: 2%;
-}
-.shape-gh {
-  width: 100%;
-  height: 100%;
-  fill: #333;
-  background: #fff;
-  vertical-align: bottom;
-}
-.shape-tw {
-  width: 100%;
-  height: 100%;
-  fill-rule: evenodd;
-  fill: #55acee;
-  background: #fff;
-  vertical-align: bottom;
-}
+.shape-gh,
+.shape-tw,
 .shape-in {
   width: 100%;
   height: 100%;
-  fill: #0077b5;
-  background: #fff;
   vertical-align: bottom;
+}
+.shape-gh {
+  fill: #333;
+}
+.shape-tw {
+  fill-rule: evenodd;
+  fill: #55acee;
+}
+.shape-in {
+  fill: #0077b5;
 }
 .wm {
   position: fixed;
@@ -139,7 +123,7 @@ aside a {
   width: 3.2rem;
   height: 3.2rem;
   padding-bottom: 0.6rem;
-  top: 3%;
+  top: 2%;
   left: 2%;
   background: url(/img/wm.png);
   border-radius: 100%;
@@ -149,11 +133,11 @@ aside a {
 }
 .wm:hover,
 .wm:focus {
-  top: calc(3% + 1px);
+  top: calc(2% + 1px);
 }
 .bubble {
-  display: block;
   opacity: 0;
+  display: block;
   position: relative;
   left: calc(0.6rem + 100%);
   min-height: 2.6rem;
@@ -178,7 +162,7 @@ aside a {
   content: '';
   display: block;
   position: absolute;
-  right: calc(100%);
+  right: 100%;
   bottom: 0;
   height: 0;
   border: 0.6rem solid transparent;
@@ -189,9 +173,9 @@ aside a {
   display: flex;
   position: absolute;
   justify-content: center;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
 }
 @media (min-width: 960px) {
   .social-cnt {
@@ -282,7 +266,7 @@ aside a {
     opacity: 1;
   }
   100% {
-    transform: rotateX(50deg) rotateZ(-30deg);
+    transform: rotateX(60deg) rotateZ(-45deg);
     opacity: 1;
   }
 }
@@ -292,7 +276,7 @@ aside a {
     opacity: 1;
   }
   100% {
-    transform: rotateX(50deg) rotateZ(-30deg);
+    transform: rotateX(60deg) rotateZ(-45deg);
     opacity: 1;
   }
 }

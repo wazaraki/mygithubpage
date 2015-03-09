@@ -47,15 +47,15 @@
   </aside>
   <aside class="social-cnt">
     <div class="social-item"><a href="https://twitter.com/wazaraki">
-        <svg viewBox="0 0 60 60" class="shape-tw">
+        <svg viewBox="0 0 63 60" class="shape-tw">
           <use xlink:href="#tw"></use>
         </svg></a></div>
     <div class="social-item"><a href="https://www.linkedin.com/in/wmanrique">
-        <svg viewBox="0 0 60 60" class="shape-in">
+        <svg viewBox="0 0 63 60" class="shape-in">
           <use xlink:href="#in"></use>
         </svg></a></div>
     <div class="social-item"><a href="https://github.com/wazaraki">
-        <svg viewBox="0 0 60 60" class="shape-gh">
+        <svg viewBox="0 0 63 60" class="shape-gh">
           <use xlink:href="#gh"></use>
         </svg></a></div>
     <div class="social-item plus-cnt">
@@ -84,5 +84,27 @@
       <path id="in" d="M 30 60 C 46.6 60 60 46.6 60 30 60 13.4 46.6 0 30 0 13.4 0 0 13.4 0 30 0 46.6 13.4 60 30 60 z m -7.6 -15.9 -6.8 0 0 -20.4 6.8 0 0 20.4 z m -3.4 -23.2 -0 0 c -2.3 0 -3.8 -1.6 -3.8 -3.5 0 -2 1.5 -3.5 3.8 -3.5 2.3 0 3.8 1.5 3.8 3.5 0 2 -1.5 3.5 -3.8 3.5 z m 27.9 23.2 -6.8 0 0 -10.9 c 0 -2.7 -1 -4.6 -3.4 -4.6 -1.9 0 -3 1.3 -3.5 2.5 -0.2 0.4 -0.2 1 -0.2 1.7 l 0 11.4 -6.8 0 c 0 0 0.1 -18.5 0 -20.4 l 6.8 0 0 2.9 c 0.9 -1.4 2.5 -3.4 6.1 -3.4 4.5 0 7.8 2.9 7.8 9.2 l -0 11.7 z"/>
     </defs>
   </svg>
+  <script>
+  (function() {
+    "use strict";
+    var b = Array.prototype.slice.apply(document.querySelectorAll('.margin, .border, .padding, .content'));
+    b.forEach((function(el) {
+      el.addEventListener('mouseover', function(e) {
+        e.stopPropagation();
+        var div = this;
+        b.map(function(x) {
+          if (x === div)
+            return div.classList.remove('white');
+          x.classList.add('white');
+        });
+      });
+    }));
+    document.querySelector('.margin').addEventListener('mouseout', (function(e) {
+      b.map((function(x) {
+        return x.classList.remove('white');
+      }));
+    }));
+  })();
+  </script>
 </body>
 </html>
